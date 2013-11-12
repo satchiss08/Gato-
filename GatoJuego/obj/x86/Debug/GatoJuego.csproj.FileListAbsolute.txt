@@ -1,0 +1,10 @@
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\bin\Debug\GatoJuego.exe
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\bin\Debug\GatoJuego.pdb
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\obj\x86\Debug\GatoJuego.Inicio.resources
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\obj\x86\Debug\GatoJuego.Juego.resources
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\obj\x86\Debug\GatoJuego.Properties.Resources.resources
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\obj\x86\Debug\GatoJuego.csproj.GenerateResource.Cache
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\obj\x86\Debug\GatoJuego.exe
+e:\satcha\desktop\Gato\GatoJuego\GatoJuego\obj\x86\Debug\GatoJuego.pdb
+E:\Satcha\Desktop\Gato\GatoJuego\obj\x86\Debug\GatoJuego.exe
+E:\Satcha\Desktop\Gato\GatoJuego\obj\x86\Debug\GatoJuego.pdb
