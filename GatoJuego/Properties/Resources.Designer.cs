@@ -63,9 +63,9 @@ namespace GatoJuego.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tic_tac_toe_board {
+        internal static System.Drawing.Bitmap prueba1 {
             get {
-                object obj = ResourceManager.GetObject("tic-tac-toe-board", resourceCulture);
+                object obj = ResourceManager.GetObject("prueba1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,39 @@ namespace GatoJuego.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap tic_tac_toe_board1 {
+        internal static System.Drawing.Bitmap prueba11 {
             get {
-                object obj = ResourceManager.GetObject("tic-tac-toe-board1", resourceCulture);
+                object obj = ResourceManager.GetObject("prueba11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prueba2 {
+            get {
+                object obj = ResourceManager.GetObject("prueba2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prueba21 {
+            get {
+                object obj = ResourceManager.GetObject("prueba21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prueba22 {
+            get {
+                object obj = ResourceManager.GetObject("prueba22", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

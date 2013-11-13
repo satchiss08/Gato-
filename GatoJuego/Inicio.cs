@@ -18,7 +18,15 @@ namespace GatoJuego
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Juego nuevoJuego = new Juego();
+            int Modo = 0;
+            if (radioButton1.Checked == true){
+                Modo = 1;
+            }
+            if(radioButton2.Checked == true){
+                Modo = 2;
+            }
+
+            Juego nuevoJuego = new Juego(Modo);
             nuevoJuego.Show();
             this.Hide();
         }
