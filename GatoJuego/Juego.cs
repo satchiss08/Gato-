@@ -280,5 +280,38 @@ namespace GatoJuego
                 return false;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {            
+            juego = true;
+            estado = 0;
+            foreach (int n in casilla){
+               casilla[n] = 0;
+            }
+            foreach (int n in jugador1)
+            {
+                casilla[n] = 0;
+            }
+            foreach (int n in jugador2)
+            {
+                casilla[n] = 0;
+            }
+            panel1.BackgroundImage = null;
+            panel2.BackgroundImage = null;
+            panel3.BackgroundImage = null;
+            panel4.BackgroundImage = null;
+            panel5.BackgroundImage = null;
+            panel6.BackgroundImage = null;
+            panel7.BackgroundImage = null;
+            panel8.BackgroundImage = null;
+            panel9.BackgroundImage = null;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Inicio nuevoInicio = new Inicio();
+            this.Close();
+            nuevoInicio.Show();
+        }
     }
 }
