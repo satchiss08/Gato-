@@ -44,22 +44,27 @@ namespace GatoJuego
             }
         }
 
+        //Nueva jugada
         private void button3_Click(object sender, EventArgs e)
         {
             bool ganador1 = false;
-            bool ganador2 = false;            
+            bool ganador2 = false;
+
+            int match = 0;
 
             //Casos de las casillas
             for (int contador = 0; contador <= 8; contador++)
             {
                 if ((textBox1.Text.Equals((contador+1).ToString())) && (casilla[contador] == 0))
                 {
+                    match = 1;
                     //Pone la casilla en no disponible
                     casilla[contador] = 1;
-                    //Verifica cual jugador está jugando
+                    //Verifica cual jugador está jugando. Jugador 1
                     if (estado == 0)
                     {
                         jugador1[contador] = 1;
+                        //case para cada imagen en el panel
                         switch (contador){
                             case 0:
                                 panel1.BackgroundImage = Properties.Resources.prueba1;
@@ -92,9 +97,11 @@ namespace GatoJuego
                         ganador1 = verificarGanador(jugador1);
                         estado = 1;
                     }
+                    //Verifica cual jugador está jugando. Jugador 2
                     else if (estado == 1)
                     {
                         jugador2[contador] = 1;
+                        //case para cada imagen en el panel
                         switch (contador){
                             case 0:
                                 panel1.BackgroundImage = Properties.Resources.prueba2;
@@ -128,205 +135,20 @@ namespace GatoJuego
                         estado = 0;
                     }
                 }
-
             }
-            
-                /*if ((textBox1.Text.Equals("1")) && (casilla[1] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[1] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[1] = 1;
-                        panel1.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[1] = 1;
-                        panel1.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if ((textBox1.Text.Equals("2")) && (casilla[2] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[2] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[2] = 1;
-                        panel2.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[2] = 1;
-                        panel2.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if (textBox1.Text.Equals("3") && (casilla[3] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[3] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[3] = 1;
-                        panel3.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[3] = 1;
-                        panel3.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if ((textBox1.Text.Equals("4")) && (casilla[4] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[4] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[4] = 1;
-                        panel4.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[4] = 1;
-                        panel4.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if ((textBox1.Text.Equals("5")) && (casilla[5] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[5] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[5] = 1;
-                        panel5.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[5] = 1;
-                        panel5.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if ((textBox1.Text.Equals("6")) && (casilla[6] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[6] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[6] = 1;
-                        panel6.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[6] = 1;
-                        panel6.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if ((textBox1.Text.Equals("7")) && (casilla[7] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[7] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[7] = 1;
-                        panel7.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[7] = 1;
-                        panel7.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if ((textBox1.Text.Equals("8")) && (casilla[8] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[8] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[8] = 1;
-                        panel8.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[8] = 1;
-                        panel8.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else if ((textBox1.Text.Equals("9")) && (casilla[9] == 0))
-                {
-                    //Pone la casilla en no disponible
-                    casilla[9] = 1;
-                    //Verifica cual jugador está jugando
-                    if (estado == 0)
-                    {
-                        jugador1[9] = 1;
-                        panel9.BackgroundImage = Properties.Resources.prueba1;
-                        ganador1 = verificarGanador(jugador1);
-                        estado = 1;
-                    }
-                    else if (estado == 1)
-                    {
-                        jugador2[9] = 1;
-                        panel9.BackgroundImage = Properties.Resources.prueba2;
-                        ganador2 = verificarGanador(jugador2);
-                        estado = 0;
-                    }
-                }
-                else
-                {
+            //En caso de que se ponga una casilla ocupada o inexistente
+            if(match == 0){
                     MessageBox.Show("¡Lo sentimos! La casilla que especificaste no está disponible", "Gato");
-                }*/
+            }
 
+            //Limpia el textbox con la casilla
             textBox1.Clear();
 
             //Muestra cual jugador está en juego
             ponerJugador();
 
-            if ((ganador1 == true) && (juego == false)){
-                MessageBox.Show("¡En hora buena jugador 1! Has ganado la partida", "Gato");
-            }
-            else if ((ganador2 == true) && (juego == false)){
-                MessageBox.Show("¡En hora buena jugador 2! Has ganado la partida", "Gato");
-            }           
+            //Muestra quien es el ganador
+            mostrarGanador(ganador1, ganador2);        
         }
 
         //Muestra cual jugador está en juego
@@ -340,25 +162,34 @@ namespace GatoJuego
             }
         }
 
+        //Muestra quien es el ganador
+        private void mostrarGanador(bool jugador1, bool jugador2)
+        {
+            if ((jugador1 == true) && (juego == false)){
+                MessageBox.Show("¡En hora buena jugador 1! Has ganado la partida", "Gato");
+            }
+            else if ((jugador2 == true) && (juego == false)){
+                MessageBox.Show("¡En hora buena jugador 2! Has ganado la partida", "Gato");
+            }  
+        }
+        
         //Verifica si hay un jugador ganador
         private bool verificarGanador(int[] jugador)
         {
             //Horizontal arriba
             if ((jugador[0] == 1) && (jugador[1] == 1) && (jugador[2] == 1)){
                 juego = false;
-                return true;
-                
+                return true;                
             }
             //Horizontal medio
             else if ((jugador[3] == 1) && (jugador[4] == 1) && (jugador[5] == 1)){
                 juego = false;
-                return true;
-                
+                return true;                
             }
             //Horizontal abajo
             else if ((jugador[6] == 1) && (jugador[7] == 1) && (jugador[8] == 1)){
                 juego = false;
-                return true;                
+                return true;               
             }
             //Vertical izquierda
             else if ((jugador[0] == 1) && (jugador[3] == 1) && (jugador[6] == 1)){
@@ -390,19 +221,19 @@ namespace GatoJuego
             }
         }
 
+        //Nuevo juego
         private void button1_Click(object sender, EventArgs e)
-        {            
+        {
+            //Limpia variables, array, paneles, etc.
             juego = true;
             estado = 0;
-            foreach (int n in casilla){
-               casilla[n] = 0;
+            for (int n = 0; n <= 8; n++){
+                casilla[n] = 0;
             }
-            foreach (int n in jugador1)
-            {
+            for (int n = 0; n <= 8; n++){
                 jugador1[n] = 0;
             }
-            foreach (int n in jugador2)
-            {
+            for (int n = 0; n <= 8; n++){
                 jugador2[n] = 0;
             }
             panel1.BackgroundImage = null;
@@ -414,8 +245,12 @@ namespace GatoJuego
             panel7.BackgroundImage = null;
             panel8.BackgroundImage = null;
             panel9.BackgroundImage = null;
+
+            textBox1.Clear();
+            textBox3.Clear();
         }
 
+        //Salir del juego
         private void button2_Click(object sender, EventArgs e)
         {
             Inicio nuevoInicio = new Inicio();
